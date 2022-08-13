@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="analyzeModel"
+            type="com.example.prro.model.AnalyzeModel" />
+    </data>
+<LinearLayout
+    android:id="@+id/LargeLinear"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/tradingviewImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@mipmap/ic_launcher"
+        android:loadImage="@{analyzeModel.tradingViewUrl}">
+
+    </com.github.chrisbanes.photoview.PhotoView>
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/rrRatioText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="9dp"
+        android:fontFamily="@font/kanit"
+        android:text="@{String.valueOf(analyzeModel.rrRatio)}"
+        android:textSize="20sp">
+
+    </TextView>
+
+    <TextView
+
+        android:id="@+id/causeForEntryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rrRatioText"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/kanit"
+        android:text="@{analyzeModel.reason}"
+        android:textSize="20sp">
+
+    </TextView>
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="25dp"
+        android:layout_height="35dp"
+        android:layout_below="@id/conceptText2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="15dp"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/delete" />
+
+    <ImageView
+        android:id="@+id/addExtraImage"
+        android:layout_width="25dp"
+        android:layout_height="35dp"
+        android:layout_below="@id/conceptText2"
+        android:layout_alignEnd="@id/imageView"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="15dp"
+        app:srcCompat="@drawable/add" />
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/causeForEntryText"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/kanit"
+        android:text="@{analyzeModel.result}"
+        android:textSize="20sp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/conceptText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/resultText"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/kanit"
+        android:text="@{analyzeModel.concept}"
+        android:textSize="20sp">
+
+    </TextView>
+
+</RelativeLayout>
+</LinearLayout>
+</layout>

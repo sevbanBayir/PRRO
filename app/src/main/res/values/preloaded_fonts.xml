@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/</item>
+        <item>@font/abeezee</item>
+        <item>@font/acme</item>
+        <item>@font/alata</item>
+        <item>@font/alatsi</item>
+        <item>@font/k2d_semibold</item>
+        <item>@font/kanit</item>
+        <item>@font/kanit_bold</item>
+        <item>@font/lato</item>
+        <item>@font/mandali</item>
+        <item>@font/margarine</item>
+        <item>@font/open_sans_light</item>
+        <item>@font/rowdies</item>
+        <item>@font/saira_stencil_one</item>
+        <item>@font/sansita_bold</item>
+        <item>@font/sen</item>
+        <item>@font/sen_bold</item>
+        <item>@font/source_sans_pro_semibold</item>
+        <item>@font/suez_one</item>
+        <item>@font/tauri</item>
+    </array>
+</resources>
